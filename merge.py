@@ -37,4 +37,4 @@ merged_csv = pd.concat([csv1, interpolated_values, csv2])
 merged_csv.columns = csv1.columns
 
 # Save the merged CSV to a new file
-merged_csv.to_csv('merged_data.csv', index=False, encoding='utf-8', lineterminator='\n')
+merged_csv.to_csv('merged_data  .csv', index=False, encoding='utf-8', lineterminator='\n')
