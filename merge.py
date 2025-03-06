@@ -4,8 +4,8 @@ import numpy as np
 NumberOfInterpolatedValues = 500
 
 # Read the CSV files
-csv1 = pd.read_csv('merged_data.csv')
-csv2 = pd.read_csv('right_hand_pick_and_place_joint_states.csv')
+csv1 = pd.read_csv('csv1.csv')
+csv2 = pd.read_csv('csv2.csv')
 
 # Ensure the CSVs have the same columns
 assert csv1.columns.equals(csv2.columns), "CSV files must have the same columns"
@@ -37,4 +37,4 @@ merged_csv = pd.concat([csv1, interpolated_values, csv2])
 merged_csv.columns = csv1.columns
 
 # Save the merged CSV to a new file
-merged_csv.to_csv('merged_data  .csv', index=False, encoding='utf-8', lineterminator='\n')
+merged_csv.to_csv('merged_data.csv', index=False, encoding='utf-8', lineterminator='\n')
